@@ -1,6 +1,7 @@
 import React from "react";
 import HomeMainComponent from "../components/homeComponents/HomeMainComponent";
 import HomeBenefits from "../components/homeComponents/HomeBenefitsComponent";
+import HomePresentationComponent from "../components/homeComponents/HomePresentationComponent";
 import ButtonComponent from "../components/shared/ButtonComponent";
 
 import mainImage from "../assets/gallery/gallery-1.jpg";
@@ -17,8 +18,10 @@ const Home = () => {
           }
           button={<ButtonComponent title={"ПОСМОТРЕТЬ НАШИ УСЛУГИ"} />}
           img={<img src={mainImage} />}
+          marginTop={"50px"}
         />
         <HomeBenefits />
+        <HomePresentationComponent />
       </div>
     </div>
   );

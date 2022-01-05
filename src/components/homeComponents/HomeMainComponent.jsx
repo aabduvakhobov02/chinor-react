@@ -3,9 +3,16 @@ import TitleComponent from "../shared/TitleComponent";
 
 import "./HomeMainComponent.css";
 
-const HomeMainComponent = ({ preTitle, title, text, button, img }) => {
+const HomeMainComponent = ({
+  preTitle,
+  title,
+  text,
+  button,
+  img,
+  marginTop,
+}) => {
   return (
-    <div className="HomeMainComponent">
+    <div style={{ marginTop: marginTop }} className="HomeMainComponent">
       <div>
         <TitleComponent preTitle={preTitle} title={title} text={text} />
         {button}

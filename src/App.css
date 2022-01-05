@@ -1,4 +1,10 @@
 .Container {
-  width: 70%;
+  max-width: 1420px;
   margin: auto;
+}
+
+@media screen and (min-width: 1420px) {
+  .Container {
+    max-width: 80%;
+  }
 }
