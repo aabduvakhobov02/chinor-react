@@ -1,8 +1,12 @@
 .Preheader {
+  background-color: #5ac430;
+}
+
+.Preheader-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #5ac430;
+  padding: 20px 0;
 }
 
 .Phone-number {
