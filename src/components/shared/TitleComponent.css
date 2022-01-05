@@ -12,9 +12,9 @@
 }
 
 .TitleComponent > h1 {
-  width: 280px;
+  width: 400px;
   color: #000000;
-  font-size: 54;
+  font-size: 36px;
   font-weight: 800;
   text-align: start;
   margin-bottom: 10px;
@@ -23,7 +23,6 @@
 .TitleComponent > p {
   width: 500px;
   color: #767676;
-  font-size: 16px;
   text-align: start;
   line-height: 130%;
   margin-bottom: 20px;
