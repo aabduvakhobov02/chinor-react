@@ -1,0 +1,19 @@
+.Preheader {
+  background-color: #5ac430;
+}
+
+.Preheader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.Phone-number {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #e4e4e4;
+  column-gap: 10px;
+}

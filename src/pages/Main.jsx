@@ -10,11 +10,11 @@ import Services from "./Services";
 const Main = () => (
   <Routes>
     <Route exact path="/" element={<Home />} />
-    <Route path="/about" element={About} />
-    <Route path="/contact" element={Contact} />
-    <Route path="/news" element={News} />
-    <Route path="/gallery" element={Gallery} />
-    <Route path="/services" element={Services} />
+    <Route exact path="/about" element={<About />} />
+    <Route exact path="/contact" element={<Contact />} />
+    <Route exact path="/news" element={<News />} />
+    <Route exact path="/gallery" element={<Gallery />} />
+    <Route exact path="/services" element={<Services />} />
   </Routes>
 );
 
