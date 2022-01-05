@@ -4,7 +4,7 @@ import "./App.css";
 
 const App = () => (
   <Router>
-    <div className="App"></div>;
+    <div className="App"></div>
   </Router>
 );
 

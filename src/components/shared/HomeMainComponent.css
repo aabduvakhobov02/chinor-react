@@ -1,0 +1,17 @@
+.HomeMainComponent {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.HomeMainComponent > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.HomeMainComponent > img {
+  width: 500px;
+  border-radius: 12px;
+}
