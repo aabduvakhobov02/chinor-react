@@ -1,0 +1,37 @@
+.Header {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  height: 10vh;
+}
+
+.Header-content {
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+}
+
+.menu__list-item {
+  list-style: none;
+}
+
+.Header-navlink {
+  text-decoration: none;
+  color: #767676;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.logo {
+  width: 14vw;
+}
+
+.Header-Button {
+  white-space: nowrap;
+}

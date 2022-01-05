@@ -9,12 +9,12 @@ import Services from "./Services";
 
 const Main = () => (
   <Routes>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/about" component={About} />
-    <Route exact path="/contact" component={Contact} />
-    <Route exact path="/news" component={News} />
-    <Route exact path="/gallery" component={Gallery} />
-    <Route exact path="/services" component={Services} />
+    <Route exact path="/" element={<Home />} />
+    <Route exact path="/about" element={<About />} />
+    <Route exact path="/contact" element={<Contact />} />
+    <Route exact path="/news" element={<News />} />
+    <Route exact path="/gallery" element={<Gallery />} />
+    <Route exact path="/services" element={<Services />} />
   </Routes>
 );
 
