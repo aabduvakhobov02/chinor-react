@@ -1,16 +1,12 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import Main from "./pages/Main";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./layout/Layout";
 
 import "./App.css";
 
 const App = () => (
   <Router>
     <div className="App">
-      <Header />
-      <Main />
-      <Footer />
+      <Layout />
     </div>
   </Router>
 );

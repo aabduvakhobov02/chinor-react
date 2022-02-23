@@ -1,0 +1,12 @@
+.Footer {
+  background-color: rgb(228, 228, 228);
+  padding: 95px 0px 18px;
+}
+
+.Footer__inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cfcdcd;
+}
