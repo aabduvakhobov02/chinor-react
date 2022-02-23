@@ -1,0 +1,21 @@
+.FooterMenu {
+}
+
+.FooterMenuTitle {
+  margin-bottom: 2vh;
+  color: #5ac430;
+  font-size: 30px;
+  line-height: 44px;
+}
+
+.FooterList {
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterListItem {
+  line-height: 47px;
+  font-size: 20px;
+  color: #767676;
+  text-decoration: none;
+}

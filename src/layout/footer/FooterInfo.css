@@ -1,0 +1,23 @@
+.FooterInfo {
+  max-width: 293px;
+}
+
+.FooterInfo-text {
+  margin-bottom: 25px;
+  color: #767676;
+  margin-top: 15px;
+}
+
+.FooterInfo-socialMedia-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5ac430;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.FooterInfo-socialMedia-links {
+  display: flex;
+  align-items: center;
+  column-gap: 34.4px;
+}

@@ -1,0 +1,18 @@
+.FooterTimetable {
+  background-color: #ffffff;
+  width: 300px;
+  height: fit-content;
+  color: #767676;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.TimetableItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 5px;
+}
+
+.TimetableItem + .TimetableItem {
+  border-top: 1px solid #5ac430;
+}

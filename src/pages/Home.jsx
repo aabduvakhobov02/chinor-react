@@ -4,11 +4,14 @@ import HomeBenefits from "../components/homeComponents/HomeBenefitsComponent";
 import ButtonComponent from "../components/shared/ButtonComponent";
 
 import mainImage from "../assets/gallery/gallery-1.jpg";
+import Content from "../layout/content/Content";
+import Head from "../layout/head/Head";
 
 const Home = () => {
   return (
-    <div>
-      <div className="Container">
+    <>
+      <Head title="Home" />
+      <Content>
         <HomeMainComponent
           preTitle={"Вдохновляя лучшее здоровье"}
           title={"Мы заботимся о вашей жизни"}
@@ -19,8 +22,8 @@ const Home = () => {
           img={<img src={mainImage} />}
         />
         <HomeBenefits />
-      </div>
-    </div>
+      </Content>
+    </>
   );
 };
 
