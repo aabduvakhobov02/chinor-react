@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
-import UsaIcon from "../../assets/flag-icons/usa.svg";
-import { Menu, MenuItem, MenuButton } from "@szhsin/react-menu";
+import React, { useEffect, useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 import Content from "../content/Content";
 
+import { useOutsideAlerter } from "../../hooks/useOutsideAlerter";
 import { languageMenu } from "../../configs/i18nConfig";
 
 import PhoneIcon from "@mui/icons-material/Phone";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
-import "@szhsin/react-menu/dist/index.css";
-import "@szhsin/react-menu/dist/transitions/slide.css";
 import "./Preheader.css";
 
 const Preheader = () => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(languageMenu[1]);
-  // const [dropdown open]
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const headerMenuRef = useRef(null);
+  const [isOutsideClicked] = useOutsideAlerter(headerMenuRef);
 
   const handleOnLanguageMenuItemSelected = (item) => {
     if (language.id !== item.id) {
@@ -34,6 +35,12 @@ const Preheader = () => {
     setLanguage(detectedLanguageMenu);
   }, [i18n.language]);
 
+  useEffect(() => {
+    if (isOutsideClicked && isDropdownOpen) {
+      setIsDropdownOpen(false);
+    }
+  }, [isOutsideClicked]);
+
   const options = languageMenu.filter((item) => language.id !== item.id);
 
   return (
@@ -44,8 +51,11 @@ const Preheader = () => {
             <PhoneIcon />
             <p>Tel: 555-000-556</p>
           </div>
-          <div className="Language">
-            <div className="LanguageWrapper">
+          <div className="Language" ref={headerMenuRef}>
+            <div
+              className="LanguageWrapper"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
+            >
               <div className="LanguageFirst">
                 <img
                   src={language.icon}
@@ -53,24 +63,27 @@ const Preheader = () => {
                   className="LanguageIcon"
                 />
                 {language.title}
+                {isDropdownOpen ? <ArrowDropUpIcon /> : <ArrowDropDownIcon />}
               </div>
             </div>
-            <ul className="LanguageList">
-              {options.map((item) => (
-                <li
-                  className="LanguageListItem"
-                  key={item.id}
-                  onClick={() => handleOnLanguageMenuItemSelected(item)}
-                >
-                  <img
-                    src={item.icon}
-                    alt="LanguageIcon"
-                    className="LanguageIcon"
-                  />
-                  <p>{item.title}</p>
-                </li>
-              ))}
-            </ul>
+            {isDropdownOpen && (
+              <ul className="LanguageList">
+                {options.map((item) => (
+                  <li
+                    className="LanguageListItem"
+                    key={item.id}
+                    onClick={() => handleOnLanguageMenuItemSelected(item)}
+                  >
+                    <img
+                      src={item.icon}
+                      alt="LanguageIcon"
+                      className="LanguageIcon"
+                    />
+                    <p>{item.title}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>
       </Content>

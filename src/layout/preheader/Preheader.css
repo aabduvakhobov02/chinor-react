@@ -48,7 +48,7 @@
   z-index: 80;
   right: 0;
   margin-top: 5px;
-  padding: 4px 8px 4px;
+  padding: 4px 8.5px 4px;
   border-radius: 20px;
   background-color: #e4e4e4;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -60,7 +60,8 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
-  padding-right: 19px;
+  padding-right: 28px;
+  margin: 5px 0;
 }
 
 .LanguageIcon {
